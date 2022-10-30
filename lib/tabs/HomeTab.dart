@@ -42,7 +42,7 @@ class HomeTab extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: ListView(
           children: [
-          CircleGreenProfile(),
+            CircleGreenProfile(),
             SizedBox(
               height: 20,
             ),
@@ -50,7 +50,7 @@ class HomeTab extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            
+
             SizedBox(
               height: 20,
             ),
@@ -99,10 +99,10 @@ class HomeTab extends StatelessWidget {
   }
 }
 
-
-
 class CircleGreenProfile extends StatelessWidget {
-  const CircleGreenProfile ({Key? key, }) : super(key: key);
+  const CircleGreenProfile({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -112,37 +112,103 @@ class CircleGreenProfile extends StatelessWidget {
         color: Color(MyColors.green),
       ),
       height: 200,
-      );
+    );
   }
 }
 
 class QuickCheckingEmotions extends StatelessWidget {
-  const QuickCheckingEmotions({Key? key, }) : super(key: key);
+  const QuickCheckingEmotions({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 100),
-    child : Container (
-      height: 150,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        gradient: LinearGradient(
+      child: Container(
+        height: 150,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
-              colors: [
+              colors: const [
                 Color.fromARGB(255, 16, 214, 188),
                 Colors.blue,
               ],
-            )
-          ),
+            )),
         //color: Color.fromARGB(125, 95, 200, 226),
-        
+
+        //Inserir emoticons
+        child: GestureDetector(
+          onTap: () => FocusScope.of(context).unfocus(),
+          child: Material(
+            color: Colors.transparent,
+            child: Padding(
+              padding: const EdgeInsets.all(45),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  CircleAvatar(
+                    backgroundImage: AssetImage(
+                        'assets/quick_checking_emotions/icons/aborecido.png'),
+                    child: Text('Aborrecido', style: TextStyle(
+                      color: Color.fromARGB(255, 255, 250, 250),
+                      fontSize: 10,
+                      fontWeight: FontWeight.bold
+                      ,),
+                    ),
+                  ),
+                  CircleAvatar(
+                    backgroundImage: AssetImage(
+                        'assets/quick_checking_emotions/icons/contente.png'),
+                        child: Text('Contente', style: TextStyle(
+                      color: Color.fromARGB(255, 255, 250, 250),
+                      fontSize: 10,
+                      fontWeight: FontWeight.bold
+                      ,),
+                    ),
+                        
+                  ),
+                  CircleAvatar(
+                    backgroundImage: AssetImage(
+                        'assets/quick_checking_emotions/icons/furioso.png'),
+                        child: Text('Furioso', style: TextStyle(
+                      color: Color.fromARGB(255, 255, 250, 250),
+                      fontSize: 10,
+                      fontWeight: FontWeight.bold
+                      ,),
+                    ),
+                  ),
+                  CircleAvatar(
+                    backgroundImage: AssetImage(
+                        'assets/quick_checking_emotions/icons/nao_sabe.png'),
+                        child: Text('Apático', style: TextStyle(
+                      color: Color.fromARGB(255, 255, 250, 250),
+                      fontSize: 10,
+                      fontWeight: FontWeight.bold
+                      ,),
+                    ),
+                  ),
+                  CircleAvatar(
+                    backgroundImage:
+                        AssetImage('assets/quick_checking_emotions/icons/triste.png'),
+                        child: Text('Triste', style: TextStyle(
+                      color: Color.fromARGB(255, 255, 250, 250),
+                      fontSize: 10,
+                      fontWeight: FontWeight.bold
+                      ,),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
 }
-
 
 //
 
@@ -344,16 +410,16 @@ class UserIntro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-    //mainAxisAlignment: MainAxisAlignment.start,
-     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
-           CircleAvatar(
-          backgroundImage: AssetImage('assets/person.jpeg'),
-          radius: 30,
-        ),
+            CircleAvatar(
+              backgroundImage: AssetImage('assets/person.jpeg'),
+              radius: 30,
+            ),
             Text(
               'Olá',
               style: TextStyle(fontWeight: FontWeight.w500),
@@ -368,3 +434,19 @@ class UserIntro extends StatelessWidget {
     );
   }
 }
+
+// Funções
+
+// construirIconesEmoticons({
+//   required String urlImage,
+//   required String title,
+// }) async => CircleAvatar(
+//                     backgroundImage: AssetImage(
+//                         urlImage),
+//                         child: SizedBox(height: 5,),
+//                         child: Text(title, style: TextStyle(
+//                       color: Color(MyColors.white),
+//                       fontWeight: FontWeight.bold
+//                       ,),
+//                     ),
+//                   );

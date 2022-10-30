@@ -13,5 +13,6 @@ class MyColors {
   static int grey01 = 0xffe9ebf0;
   static int grey02 = 0xff9796af;
   static int green = 0xff58B368;
-  //static int blue = 
+  static int white = 0xFFFFFFFF;
+  //static int blue =
 }

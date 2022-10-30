@@ -16,3 +16,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/quick_checking_emotions/icons/
