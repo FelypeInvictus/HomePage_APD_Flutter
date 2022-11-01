@@ -116,6 +116,102 @@ class CircleGreenProfile extends StatelessWidget {
   }
 }
 
+// class QuickCheckingEmotions extends StatelessWidget {
+//   const QuickCheckingEmotions({
+//     Key? key,
+//   }) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: EdgeInsets.symmetric(horizontal: 100),
+//       child: Container(
+//         height: 150,
+//         decoration: BoxDecoration(
+//             borderRadius: BorderRadius.circular(20),
+//             gradient: LinearGradient(
+//               begin: Alignment.topRight,
+//               end: Alignment.bottomLeft,
+//               colors: const [
+//                 Color.fromARGB(255, 16, 214, 188),
+//                 Colors.blue,
+//               ],
+//             )),
+//         //color: Color.fromARGB(125, 95, 200, 226),
+
+//         //Inserir emoticons
+//         child: GestureDetector(
+//           onTap: () => FocusScope.of(context).unfocus(),
+//           child: Material(
+//             color: Colors.transparent,
+//             child: Padding(
+//               padding: const EdgeInsets.all(45),
+//               child: Row(
+//                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                 children: const [
+//                   CircleAvatar(
+//                     backgroundImage: AssetImage(
+//                         'assets/quick_checking_emotions/icons/aborecido.png'),
+//                     child: Text('Aborrecido', style: TextStyle(
+//                       color: Color.fromARGB(255, 255, 250, 250),
+//                       fontSize: 10,
+//                       fontWeight: FontWeight.bold
+//                       ,),
+//                     ),
+//                   ),
+//                   CircleAvatar(
+//                     backgroundImage: AssetImage(
+//                         'assets/quick_checking_emotions/icons/contente.png'),
+//                         child: Text('Contente', style: TextStyle(
+//                       color: Color.fromARGB(255, 255, 250, 250),
+//                       fontSize: 10,
+//                       fontWeight: FontWeight.bold
+//                       ,),
+//                     ),
+
+//                   ),
+//                   CircleAvatar(
+//                     backgroundImage: AssetImage(
+//                         'assets/quick_checking_emotions/icons/furioso.png'),
+//                         child: Text('Furioso', style: TextStyle(
+//                       color: Color.fromARGB(255, 255, 250, 250),
+//                       fontSize: 10,
+//                       fontWeight: FontWeight.bold
+//                       ,),
+//                     ),
+//                   ),
+//                   CircleAvatar(
+//                     backgroundImage: AssetImage(
+//                         'assets/quick_checking_emotions/icons/nao_sabe.png'),
+//                         child: Text('Apático', style: TextStyle(
+//                       color: Color.fromARGB(255, 255, 250, 250),
+//                       fontSize: 10,
+//                       fontWeight: FontWeight.bold
+//                       ,),
+//                     ),
+//                   ),
+//                   CircleAvatar(
+//                     backgroundImage:
+//                         AssetImage('assets/quick_checking_emotions/icons/triste.png'),
+//                         child: Text('Triste', style: TextStyle(
+//                       color: Color.fromARGB(255, 255, 250, 250),
+//                       fontSize: 10,
+//                       fontWeight: FontWeight.bold
+//                       ,),
+//                     ),
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+//Teste
+
 class QuickCheckingEmotions extends StatelessWidget {
   const QuickCheckingEmotions({
     Key? key,
@@ -146,60 +242,44 @@ class QuickCheckingEmotions extends StatelessWidget {
             color: Colors.transparent,
             child: Padding(
               padding: const EdgeInsets.all(45),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  CircleAvatar(
-                    backgroundImage: AssetImage(
-                        'assets/quick_checking_emotions/icons/aborecido.png'),
-                    child: Text('Aborrecido', style: TextStyle(
-                      color: Color.fromARGB(255, 255, 250, 250),
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold
-                      ,),
-                    ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      CircleAvatar(
+                        backgroundImage: AssetImage(
+                            'assets/quick_checking_emotions/icons/aborecido.png'),
+                      ),
+                      CircleAvatar(
+                        backgroundImage: AssetImage(
+                            'assets/quick_checking_emotions/icons/contente.png'),
+                      ),
+                      CircleAvatar(
+                        backgroundImage: AssetImage(
+                            'assets/quick_checking_emotions/icons/furioso.png'),
+                      ),
+                      CircleAvatar(
+                        backgroundImage: AssetImage(
+                            'assets/quick_checking_emotions/icons/nao_sabe.png'),
+                      ),
+                      CircleAvatar(
+                        backgroundImage: AssetImage(
+                            'assets/quick_checking_emotions/icons/triste.png'),
+                      ),
+                    ],
                   ),
-                  CircleAvatar(
-                    backgroundImage: AssetImage(
-                        'assets/quick_checking_emotions/icons/contente.png'),
-                        child: Text('Contente', style: TextStyle(
-                      color: Color.fromARGB(255, 255, 250, 250),
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold
-                      ,),
-                    ),
-                        
-                  ),
-                  CircleAvatar(
-                    backgroundImage: AssetImage(
-                        'assets/quick_checking_emotions/icons/furioso.png'),
-                        child: Text('Furioso', style: TextStyle(
-                      color: Color.fromARGB(255, 255, 250, 250),
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold
-                      ,),
-                    ),
-                  ),
-                  CircleAvatar(
-                    backgroundImage: AssetImage(
-                        'assets/quick_checking_emotions/icons/nao_sabe.png'),
-                        child: Text('Apático', style: TextStyle(
-                      color: Color.fromARGB(255, 255, 250, 250),
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold
-                      ,),
-                    ),
-                  ),
-                  CircleAvatar(
-                    backgroundImage:
-                        AssetImage('assets/quick_checking_emotions/icons/triste.png'),
-                        child: Text('Triste', style: TextStyle(
-                      color: Color.fromARGB(255, 255, 250, 250),
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold
-                      ,),
-                    ),
-                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      
+                      construirTextoEmotions(text: 'Doente'),
+                      construirTextoEmotions(text: 'Feliz'),
+                      construirTextoEmotions(text: 'Furioso'),
+                      construirTextoEmotions(text: 'Aborrecido'),
+                      construirTextoEmotions(text: 'Triste')
+                    ],
+                  )
                 ],
               ),
             ),
@@ -209,8 +289,6 @@ class QuickCheckingEmotions extends StatelessWidget {
     );
   }
 }
-
-//
 
 class AppointmentCard extends StatelessWidget {
   final void Function() onTap;
@@ -450,3 +528,17 @@ class UserIntro extends StatelessWidget {
 //                       ,),
 //                     ),
 //                   );
+
+construirTextoEmotions({
+  required String text,
+}) =>
+    Text(
+      text,
+      style: TextStyle(
+        color: Color.fromARGB(255, 255, 250, 250),
+        fontSize: 15,
+        fontWeight: FontWeight.bold,
+      ),
+    );
+
+
