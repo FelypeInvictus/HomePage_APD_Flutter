@@ -220,7 +220,7 @@ class QuickCheckingEmotions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 100),
+      padding: EdgeInsets.symmetric(horizontal: 45),
       child: Container(
         height: 150,
         decoration: BoxDecoration(
@@ -241,7 +241,7 @@ class QuickCheckingEmotions extends StatelessWidget {
           child: Material(
             color: Colors.transparent,
             child: Padding(
-              padding: const EdgeInsets.all(45),
+              padding: const EdgeInsets.all(45), 
               child: Column(
                 children: [
                   Row(
@@ -269,17 +269,104 @@ class QuickCheckingEmotions extends StatelessWidget {
                       ),
                     ],
                   ),
+                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const [
+                      Padding(padding: EdgeInsets.fromLTRB(25,2,0,0),
+                      child: Text(
+                        'Doente',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 250, 250),
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      ),
+                       Padding(padding: EdgeInsets.fromLTRB(25,2,0,0),
+                      child: Text(
+                        'Feliz',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 250, 250),
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      ),
+                       Padding(padding: EdgeInsets.fromLTRB(25,2,0,0),
+                      child: Text(
+                        'Raiva',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 250, 250),
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      ),
+                       Padding(padding: EdgeInsets.fromLTRB(25,2,0,0),
+                      child: Text(
+                        'Nao sei',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 250, 250),
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      ),
+                       Padding(padding: EdgeInsets.fromLTRB(25,2,0,0),
+                      child: Text(
+                        'Triste',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 250, 250),
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      ),
                       
-                      construirTextoEmotions(text: 'Doente'),
-                      construirTextoEmotions(text: 'Feliz'),
-                      construirTextoEmotions(text: 'Furioso'),
-                      construirTextoEmotions(text: 'Aborrecido'),
-                      construirTextoEmotions(text: 'Triste')
+                      // Text(
+                      //   'Feliz',
+                      //   style: TextStyle(
+                      //     color: Color.fromARGB(255, 255, 250, 250),
+                      //     fontSize: 15,
+                      //     fontWeight: FontWeight.bold,
+                      //   ),
+                      // ),
+                      // Text(
+                      //   'Furioso',
+                      //   style: TextStyle(
+                      //     color: Color.fromARGB(255, 255, 250, 250),
+                      //     fontSize: 15,
+                      //     fontWeight: FontWeight.bold,
+                      //   ),
+                      // ),
+                      // Text(
+                      //   'Não sabe',
+                      //   style: TextStyle(
+                      //     color: Color.fromARGB(255, 255, 250, 250),
+                      //     fontSize: 15,
+                      //     fontWeight: FontWeight.bold,
+                      //   ),
+                      // ),
+                      // Text(
+                      //   'Péssimo',
+                      //   style: TextStyle(
+                      //     color: Color.fromARGB(255, 255, 250, 250),
+                      //     fontSize: 15,
+                      //     fontWeight: FontWeight.bold,
+                      //   ),
+                      // ),
+                      
+                      // Código que pode ser reaproveitado
+
+                      // construirTextoEmotions(text: 'Doente'),
+                      // construirTextoEmotions(text: 'Feliz'),
+                      // construirTextoEmotions(text: 'Furioso'),
+                      // construirTextoEmotions(text: 'Aborrecido'),
+                      // construirTextoEmotions(text: 'Triste')
+                      
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
@@ -289,6 +376,8 @@ class QuickCheckingEmotions extends StatelessWidget {
     );
   }
 }
+
+
 
 class AppointmentCard extends StatelessWidget {
   final void Function() onTap;
@@ -540,5 +629,3 @@ construirTextoEmotions({
         fontWeight: FontWeight.bold,
       ),
     );
-
-
