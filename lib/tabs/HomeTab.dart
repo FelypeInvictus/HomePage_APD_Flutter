@@ -36,7 +36,7 @@ class HomeTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20),
@@ -140,7 +140,7 @@ class CircleGreenProfile extends StatelessWidget {
 //         //color: Color.fromARGB(125, 95, 200, 226),
 
 //         //Inserir emoticons
-//         child: GestureDetector(
+//         child: InkWell(
 //           onTap: () => FocusScope.of(context).unfocus(),
 //           child: Material(
 //             color: Colors.transparent,
@@ -236,7 +236,7 @@ class QuickCheckingEmotions extends StatelessWidget {
         //color: Color.fromARGB(125, 95, 200, 226),
 
         //Inserir emoticons
-        child: GestureDetector(
+        child: InkWell(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Material(
             color: Colors.transparent,
@@ -246,26 +246,59 @@ class QuickCheckingEmotions extends StatelessWidget {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      CircleAvatar(
+                    children: [
+                      IconButton(
+                        onPressed: () => (
+                          print("doente")
+                          
+                        ),
+                        icon: CircleAvatar(
                         backgroundImage: AssetImage(
                             'assets/quick_checking_emotions/icons/aborecido.png'),
                       ),
-                      CircleAvatar(
+                      ),
+                      
+                      IconButton(
+                       onPressed: () => (
+                          print("feliz")
+                          
+                        ),
+                     icon: CircleAvatar(
                         backgroundImage: AssetImage(
                             'assets/quick_checking_emotions/icons/contente.png'),
                       ),
-                      CircleAvatar(
+                      ),
+
+                      IconButton(
+                        onPressed: () => (
+                          print("aborecido")
+                          
+                        ),
+                      icon: CircleAvatar(
                         backgroundImage: AssetImage(
                             'assets/quick_checking_emotions/icons/furioso.png'),
                       ),
-                      CircleAvatar(
+                      ),
+                      IconButton(
+                        onPressed: () => (
+                          print("Não sabe")
+                          
+                        ),
+                      icon: CircleAvatar(
                         backgroundImage: AssetImage(
                             'assets/quick_checking_emotions/icons/nao_sabe.png'),
                       ),
-                      CircleAvatar(
+                      ),
+                      IconButton(
+                        onPressed: () => (
+                          print("triste")
+                          
+                        ),
+                      icon: CircleAvatar(
+                        radius: 50,
                         backgroundImage: AssetImage(
                             'assets/quick_checking_emotions/icons/triste.png'),
+                      ),
                       ),
                     ],
                   ),
@@ -273,7 +306,7 @@ class QuickCheckingEmotions extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
-                      Padding(padding: EdgeInsets.fromLTRB(25,2,0,0),
+                      Padding(padding: EdgeInsets.fromLTRB(0,0,50,0),
                       child: Text(
                         'Doente',
                         style: TextStyle(
@@ -283,7 +316,7 @@ class QuickCheckingEmotions extends StatelessWidget {
                         ),
                       ),
                       ),
-                       Padding(padding: EdgeInsets.fromLTRB(25,2,0,0),
+                       Padding(padding: EdgeInsets.fromLTRB(0,0,55,0),
                       child: Text(
                         'Feliz',
                         style: TextStyle(
@@ -293,17 +326,18 @@ class QuickCheckingEmotions extends StatelessWidget {
                         ),
                       ),
                       ),
-                       Padding(padding: EdgeInsets.fromLTRB(25,2,0,0),
+                       Padding(padding: EdgeInsets.fromLTRB(0,0,55,0),
                       child: Text(
                         'Raiva',
                         style: TextStyle(
+                         
                           color: Color.fromARGB(255, 255, 250, 250),
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       ),
-                       Padding(padding: EdgeInsets.fromLTRB(25,2,0,0),
+                       Padding(padding: EdgeInsets.fromLTRB(0,0,35,0),
                       child: Text(
                         'Nao sei',
                         style: TextStyle(
@@ -313,7 +347,7 @@ class QuickCheckingEmotions extends StatelessWidget {
                         ),
                       ),
                       ),
-                       Padding(padding: EdgeInsets.fromLTRB(25,2,0,0),
+                       Padding(padding: EdgeInsets.fromLTRB(0,0,0,0),
                       child: Text(
                         'Triste',
                         style: TextStyle(
